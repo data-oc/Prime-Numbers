@@ -1,3 +1,5 @@
+// C standard revision = C23 (ISO/IEC 9899:2024)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
