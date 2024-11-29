@@ -1,0 +1,12 @@
+{
+  "name": "prime-finder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^22.10.1",
+    "cli-progress": "^3.12.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
