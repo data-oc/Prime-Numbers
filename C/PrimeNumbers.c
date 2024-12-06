@@ -68,10 +68,10 @@ int main(void) {
     printf("\n");
 
     // Collect primes and write them to a file
-    printf("Saving primes to file...\n");
+    printf("\nSaving primes to file...\n");
     FILE *file = fopen(OUTPUT_FILE, "w");
     if (file == NULL) {
-        fprintf(stderr, "Failed to open file for writing.\n");
+        fprintf(stderr, "\nFailed to open file for writing.\n");
         free(is_prime);
         return EXIT_FAILURE;
     }
@@ -90,7 +90,7 @@ int main(void) {
     double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
 
     // Print results
-    printf("Number of primes found: %lld\n", prime_count);
+    printf("\nNumber of primes found: %lld\n", prime_count);
     printf("Time taken: %.2f seconds\n", elapsed_time);
     
     getch();
