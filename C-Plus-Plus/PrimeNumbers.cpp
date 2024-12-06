@@ -69,7 +69,7 @@ int main() {
 
     // Calculate primes
     std::vector<int> primes = sieveOfEratosthenes(LIMIT);
-    
+
     // Save primes to file
     std::cout << "\nSaving primes to file...\n";
     savePrimesToFile(primes, OUTPUT_FILE);
