@@ -1,8 +1,6 @@
 // .NET 9.0.100
 
-using System;
 using System.Diagnostics;
-using System.IO;
 using System.Text;
 
 class PrimeNumbers
@@ -48,7 +46,7 @@ class PrimeNumbers
         }
 
         PrintProgressBar(100); // Complete the progress bar
-        Console.WriteLine("\nFinished sieve computation. Writing primes to file...");
+        Console.WriteLine("\n\nFinished sieve computation. \n\nSaving primes to file...");
 
         // Collect and save primes
         using (StreamWriter writer = new StreamWriter(OUTPUT_FILE))
@@ -67,10 +65,11 @@ class PrimeNumbers
             stopwatch.Stop(); // Stop the stopwatch
             double elapsedSeconds = stopwatch.Elapsed.TotalSeconds;
 
-            // Results
-            Console.WriteLine($"Number of primes found: {primeCount}");
-            Console.WriteLine($"Time taken: {elapsedSeconds:F2} seconds");
             Console.WriteLine($"All primes have been saved to '{OUTPUT_FILE}'");
+
+            // Results
+            Console.WriteLine($"\nNumber of primes found: {primeCount}");
+            Console.WriteLine($"Time taken: {elapsedSeconds:F2} seconds");
         }
     }
 
