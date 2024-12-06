@@ -63,14 +63,14 @@ fn main() {
     // Find all primes using the sieve
     let primes = sieve_of_eratosthenes(LIMIT);
 
-    let elapsed_time = start_time.elapsed();
-    println!("\nNumber of primes found: {}", primes.len());
-    println!("Time taken: {:.2} seconds", elapsed_time.as_secs_f64());
-
     // Save primes to file
     println!("\nSaving primes to file...");
     match save_primes_to_file(&primes, OUTPUT_FILE) {
         Ok(_) => println!("All primes have been saved to '{}'", OUTPUT_FILE),
         Err(e) => println!("Failed to save primes: {}", e),
     }
+
+    let elapsed_time = start_time.elapsed();
+    println!("\nNumber of primes found: {}", primes.len());
+    println!("Time taken: {:.2} seconds", elapsed_time.as_secs_f64());
 }
