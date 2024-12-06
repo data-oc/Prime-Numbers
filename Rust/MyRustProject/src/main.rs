@@ -64,7 +64,7 @@ fn main() {
     let primes = sieve_of_eratosthenes(LIMIT);
 
     // Save primes to file
-    println!("\nSaving primes to file...");
+    println!("\n\nSaving primes to file...");
     match save_primes_to_file(&primes, OUTPUT_FILE) {
         Ok(_) => println!("All primes have been saved to '{}'", OUTPUT_FILE),
         Err(e) => println!("Failed to save primes: {}", e),
