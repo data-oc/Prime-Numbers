@@ -69,6 +69,11 @@ int main() {
 
     // Calculate primes
     std::vector<int> primes = sieveOfEratosthenes(LIMIT);
+    
+    // Save primes to file
+    std::cout << "\nSaving primes to file...\n";
+    savePrimesToFile(primes, OUTPUT_FILE);
+    std::cout << "All primes have been saved to '" << OUTPUT_FILE << "'\n";
 
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
@@ -76,11 +81,6 @@ int main() {
     // Results
     std::cout << "\nNumber of primes found: " << primes.size() << std::endl;
     std::cout << "Time taken: " << std::fixed << std::setprecision(2) << elapsed.count() << " seconds\n";
-
-    // Save primes to file
-    std::cout << "\nSaving primes to file...\n";
-    savePrimesToFile(primes, OUTPUT_FILE);
-    std::cout << "All primes have been saved to '" << OUTPUT_FILE << "'\n";
 
     return 0;
 }
