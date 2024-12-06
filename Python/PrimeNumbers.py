@@ -1,4 +1,4 @@
-# Python 3.13.0
+# Python 3.13.1
 
 import time
 import math
@@ -45,13 +45,15 @@ if __name__ == "__main__":
 
     # Calculate all primes
     primes = sieve_of_eratosthenes(LIMIT)
+    print("\nFinished sieve computation.")
+
+    # Save primes to a file
+    print("\nSaving primes to file...")
+    save_primes_to_file(primes)
 
     end_time = time.time()  # Stop the stopwatch
     elapsed_time = end_time - start_time
 
     # Print results
-    print(f"Number of primes found: {len(primes)}")
+    print(f"\nNumber of primes found: {len(primes)}")
     print(f"Time taken: {elapsed_time:.2f} seconds")
-
-    # Save primes to a file
-    save_primes_to_file(primes)
