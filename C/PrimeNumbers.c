@@ -68,7 +68,7 @@ int main(void) {
     printf("\n");
 
     // Collect primes and write them to a file
-    printf("Writing primes to file...\n");
+    printf("Saving primes to file...\n");
     FILE *file = fopen(OUTPUT_FILE, "w");
     if (file == NULL) {
         fprintf(stderr, "Failed to open file for writing.\n");
@@ -84,6 +84,7 @@ int main(void) {
         }
     }
     fclose(file);
+    printf("All primes have been saved to '%s'\n", OUTPUT_FILE);
 
     clock_t end_time = clock(); // Stop the stopwatch
     double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
@@ -91,7 +92,6 @@ int main(void) {
     // Print results
     printf("Number of primes found: %lld\n", prime_count);
     printf("Time taken: %.2f seconds\n", elapsed_time);
-    printf("All primes have been saved to '%s'\n", OUTPUT_FILE);
     
     getch();
 
