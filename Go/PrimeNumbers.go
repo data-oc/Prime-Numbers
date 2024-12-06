@@ -70,9 +70,10 @@ func main() {
 	// Calculate primes
 	primes, bar := sieveOfEratosthenes(LIMIT)
 	bar.Finish() // Finish the progress bar
+	fmt.Printf("\nFinished sieve computation.")
 
 	// Save primes to file
-	fmt.Println("\nSaving primes to file...")
+	fmt.Println("\n\nSaving primes to file...")
 	err := savePrimesToFile(primes, OUTPUT_FILE)
 	if err != nil {
 		fmt.Printf("Failed to save primes: %v\n", err)
