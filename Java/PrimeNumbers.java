@@ -1,4 +1,4 @@
-// OpenJDK JDK 23.0.1
+// JDK 23.0.1
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
