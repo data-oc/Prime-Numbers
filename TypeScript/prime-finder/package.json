@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node primeFinder.ts"
+  },
   "dependencies": {
     "@types/node": "^22.10.1",
     "cli-progress": "^3.12.0",
