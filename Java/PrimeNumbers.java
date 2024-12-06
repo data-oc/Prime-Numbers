@@ -1,5 +1,7 @@
 // JDK 23.0.1
 
+package com.mycompany.primenumbers;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,7 +20,13 @@ public class PrimeNumbers {
 
         // Calculate primes
         List<Integer> primes = sieveOfEratosthenes(LIMIT);
+        System.out.println("Finished sieve computation.");
 
+        // Save primes to file
+        System.out.println("\nSaving primes to file...");
+        savePrimesToFile(primes, OUTPUT_FILE);
+        System.out.println("All primes have been saved to '" + OUTPUT_FILE + "'");
+        
         // Stop the stopwatch
         long endTime = System.currentTimeMillis();
         double elapsedTime = (endTime - startTime) / 1000.0;
@@ -26,11 +34,6 @@ public class PrimeNumbers {
         // Display results
         System.out.println("\nNumber of primes found: " + primes.size());
         System.out.printf("Time taken: %.2f seconds%n", elapsedTime);
-
-        // Save primes to file
-        System.out.println("\nSaving primes to file...");
-        savePrimesToFile(primes, OUTPUT_FILE);
-        System.out.println("All primes have been saved to '" + OUTPUT_FILE + "'");
     }
 
     private static List<Integer> sieveOfEratosthenes(int limit) {
