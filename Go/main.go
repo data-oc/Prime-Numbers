@@ -71,13 +71,6 @@ func main() {
 	primes, bar := sieveOfEratosthenes(LIMIT)
 	bar.Finish() // Finish the progress bar
 
-	// Stop the stopwatch
-	elapsed := time.Since(start)
-
-	// Print results
-	fmt.Printf("\nNumber of primes found: %d\n", len(primes))
-	fmt.Printf("Time taken: %.2f seconds\n", elapsed.Seconds())
-
 	// Save primes to file
 	fmt.Println("\nSaving primes to file...")
 	err := savePrimesToFile(primes, OUTPUT_FILE)
@@ -86,4 +79,11 @@ func main() {
 	} else {
 		fmt.Printf("All primes have been saved to '%s'\n", OUTPUT_FILE)
 	}
+
+	// Stop the stopwatch
+	elapsed := time.Since(start)
+
+	// Print results
+	fmt.Printf("\nNumber of primes found: %d\n", len(primes))
+	fmt.Printf("Time taken: %.2f seconds\n", elapsed.Seconds())
 }
