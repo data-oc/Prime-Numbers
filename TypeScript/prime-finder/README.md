@@ -57,18 +57,15 @@ yarn start
 ```
 
 # Project Folder Structure
-my-typescript-project/
-├── dist/PrimeNumbers.js  
-├── node_modules	
-├── src/PrimeNumbers.ts                          
-├── package.json               
-├── tsconfig.json             
+```bash
+my-typescript-project
+├── dist
+│   ├── PrimeNumbers.js
+├── src
+│   ├── PrimeNumbers.ts 
+├── node_modules
+├── package.json
+├── tsconfig.json  
 ├── yarn.lock
-
-# Description of Each Folder/File:
-- `dist/`: Contains the compiled JavaScript files after TypeScript compilation.
-- `src/`: Holds the TypeScript source code.
-- `node_modules/`: Contains the dependencies installed via Yarn.
-- `package.json`: The configuration file for your project, including dependencies and scripts.
-- `tsconfig.json`: TypeScript configuration file.
-- `README.md`: This file, which contains documentation about the project.
+└── README.md
+```
