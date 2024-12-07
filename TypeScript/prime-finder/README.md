@@ -21,7 +21,7 @@ yarn add cli-progress
 yarn tsc --init
 ```
 
-4. tsconfig.json
+4. Modify the tsconfig.json
 ```json
 {
   "compilerOptions": {
