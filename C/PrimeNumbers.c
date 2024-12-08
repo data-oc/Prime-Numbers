@@ -1,4 +1,4 @@
-// C standard revision = C99 (ISO/IEC 9899:1999)
+// C standard revision = C89 (ANSI C)
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,6 +8,15 @@
 
 #define LIMIT 1000000000          // Limit for finding primes
 #define OUTPUT_FILE "prime_numbers.txt" // File to save the primes
+
+// uses features specific to a C standard
+#if __STDC_VERSION__ >= 201112L
+#define C_VERSION "C11"
+#elif __STDC_VERSION__ >= 199901L
+#define C_VERSION "C99"
+#else
+#define C_VERSION "C89"
+#endif
 
 void print_progress_bar(long long current, long long total) {
     const int bar_width = 50; // Width of the progress bar
@@ -33,12 +42,14 @@ int main(void) {
     long long i; // Loop variable
     long long p; // Loop variable for primes
     long long multiple; // Loop variable for multiples
+    
+    printf("C Version: %s\n\n", C_VERSION);
 
     // Allocate memory for the sieve
-    printf("Allocating memory...\n");
+    printf("Allocating memory...\n\n");
     bool *is_prime = malloc((LIMIT + 1) * sizeof(bool));
     if (is_prime == NULL) {
-        fprintf(stderr, "Memory allocation failed.\n");
+        fprintf(stderr, "Memory allocation failed.\n\n");
         return EXIT_FAILURE;
     }
 
